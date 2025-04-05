@@ -1,3 +1,11 @@
+/* Start Vraibles  */
+
+:root {
+  --primary-color: hsl(193, 100%, 49%);
+}
+
+/* End Vraibles  */
+
 /* Start Global Rules */
 
 * {
@@ -10,6 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Opan sans", sans-serif;
+  background-color: black;
+}
+
 ul {
   list-style: none;
 }
@@ -17,8 +30,7 @@ ul {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -27,4 +39,128 @@ ul {
   }
 }
 
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
 /* End Global Rules */
+
+/* Start Header */
+
+.header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  min-height: 97px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  height: 2px;
+  width: calc(100% - 30px);
+  position: absolute;
+  background-color: #a2a2a2;
+  bottom: 0px;
+  left: 15px;
+}
+
+.header img {
+  height: 40px;
+}
+
+/* Improve this code and use Js */
+.header .toggle-menu {
+  display: none;
+  color: white;
+  font-size: 1.35rem;
+}
+
+@media (max-width: 768px) {
+  .header .toggle-menu {
+    display: block;
+  }
+}
+
+.header nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+}
+
+/* Also this code needs some JS */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 50%);
+  }
+  nav ul li a {
+    padding: 1rem !important;
+  }
+}
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 0.96rem;
+  padding: 2.5rem 0.6rem;
+  position: relative;
+  z-index: 2;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.header nav .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+
+.header nav .form i {
+  color: white;
+  position: absolute;
+  font-size: 1.25rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* End Header */
