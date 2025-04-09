@@ -1018,3 +1018,138 @@ nav ul li a:hover {
   }
 }
 /* Start Subscribe */
+
+/* Start Contact */
+
+.contact {
+  padding: var(--section-padding) 0;
+}
+
+.contact .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .container .content {
+  flex-basis: 70%;
+}
+
+.contact .container form .main-input {
+  display: block;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.contact .container form textarea.main-input {
+  height: 150px;
+}
+
+.contact form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact .container .info {
+  flex-basis: 25%;
+}
+
+.contact .container .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.contact .container .info .phone {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 0.7rem;
+}
+
+.contact .container .info h4:nth-of-type(2) {
+  margin-top: 5.25rem;
+}
+
+.contact .container .info address {
+  line-height: 2;
+  color: #777;
+}
+
+@media (max-width: 767px) {
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .container .info {
+    order: -1;
+    text-align: center;
+  }
+
+  .contact .container .info h4:nth-of-type(2) {
+    margin-top: 10px;
+  }
+}
+
+/* Start Contact */
+
+/* footer */
+
+footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  background-image: url("https://api.algobook.info/v1/randomimage?category=backgrounds");
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 70%);
+  left: 0;
+  top: 0;
+}
+
+.footer .container {
+  position: relative;
+}
+.footer img {
+  margin-bottom: 20px;
+}
+.footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+}
+.footer .social-icons i {
+  padding: 10px 15px;
+}
+.footer .copyright {
+  margin-top: 60px;
+}
+.footer .copyright span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+/* footer */
